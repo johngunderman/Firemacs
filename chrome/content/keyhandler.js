@@ -125,8 +125,7 @@ Firemacs.KeyHandler = {
 	    return true;
 	}
 
-	if ((ctrl && (ch == '\['))                 || // C-[
-	    (e.charCode == KeyEvent.DOM_VK_ESCAPE) || // Mac's C-[
+	if ((e.charCode == KeyEvent.DOM_VK_ESCAPE) || // Mac's C-[
 	    (useEscape && (e.keyCode == KeyEvent.DOM_VK_ESCAPE))) { // ESC
 	    this._setEscape(true);
 	    this._displayMessage('ESC-', 1000);
